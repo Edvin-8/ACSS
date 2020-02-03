@@ -1,0 +1,53 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #050210; 
+}
+
+.krug {
+    background:linear-gradient(#fb5dad, #55fb9f, #b97aff);
+    width:300px;
+    height:300px;
+    border-radius: 50%;
+    position: absolute;
+    animation: okreci 1s linear infinite;
+}
+
+
+.krug:after {
+    content: '';
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+    background: #050210;
+    border-radius: 50%;
+}
+
+.krug div {
+    width:300px;
+    height:300px;
+    position: absolute;
+    border-radius: 50%;
+    background: linear-gradient(#fb5dad, #55fb9f, #b97aff);
+    filter: blur(30px);
+
+}
+
+
+
+@keyframes okreci {
+    0%
+    {
+        transform: rotate(0deg);
+    }
+    100%
+    {
+        transform: rotate(360deg);
+    }
+}
